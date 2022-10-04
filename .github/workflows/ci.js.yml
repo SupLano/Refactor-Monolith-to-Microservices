@@ -23,6 +23,7 @@ jobs:
     - uses: actions/checkout@v3
     - run: docker-compose -f docker-compose-build.yaml build --parallel
     - run: docker tag udagram-frontend:local lawrenceoragwa/udagram-frontend:v1
+    - run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_USERNAME}}" --password-stdin
     - run: docker tag udagram-api-user lawrenceoragwa/udagram-api-user:v1
     - run: docker tag udagram-api-feed lawrenceoragwa/udagram-api-feed:v1
     - run: docker tag reverseproxy lawrenceoragwa/reverseproxy:v1
