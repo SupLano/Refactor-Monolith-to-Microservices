@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: udagram-env
 data:
-  POSTGRES_HOST: willowinstance.cxpq49awdnbc.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: database-1.ccp3fhjk2bla.us-east-1.rds.amazonaws.com
   POSTGRES_DB: willows
   AWS_BUCKET: willow-store
   AWS_REGION: us-east-1 
